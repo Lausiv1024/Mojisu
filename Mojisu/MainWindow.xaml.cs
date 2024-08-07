@@ -24,5 +24,13 @@ namespace Mojisu
         {
             InitializeComponent();
         }
+
+        private void ReportText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            int rawCount = ReportText.Text.Length;
+            int countWithoutRet = ReportText.Text.Replace(Environment.NewLine, string.Empty).Length;
+            if (Counts != null)
+                Counts.Text = $"文字数：{rawCount}  改行を除いた文字数：{countWithoutRet}";
+        }
     }
 }

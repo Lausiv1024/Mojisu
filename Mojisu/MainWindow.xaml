@@ -5,16 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mojisu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="文字数カウント" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="ReportText" Text="文字数ゲー"/>
+        <TextBox x:Name="ReportText" Text="文字数ゲー" Margin="8" TextChanged="ReportText_TextChanged" AcceptsReturn="True"/>
+        <TextBlock x:Name="Counts" Grid.Row="1" Text="" Margin="8"/>
     </Grid>
 </Window>
